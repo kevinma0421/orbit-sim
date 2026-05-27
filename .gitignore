@@ -1,3 +1,4 @@
 /build/
 /.vscode/
 /sat_env/
+/scripts/*.bin
