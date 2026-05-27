@@ -10,7 +10,7 @@ Gui::Gui(GLFWwindow *window)
     font_cfg.OversampleV = 4;    // Vertical oversampling
     font_cfg.PixelSnapH = false; // Smooth horizontal positioning
 
-    ImFont *font = io.Fonts->AddFontFromFileTTF("C:/Users/123ke/projects/opengl/textures/static/Roboto-Black.ttf", 12.0f, &font_cfg);
+    ImFont *font = io.Fonts->AddFontFromFileTTF("textures/static/Roboto-Black.ttf", 12.0f, &font_cfg);
     io.FontDefault = font;
     (void)io;
 
@@ -24,9 +24,9 @@ Gui::Gui(GLFWwindow *window)
 
     currIndex = 0;
 
-    GLuint texPause = LoadTexture("C:/Users/123ke/projects/opengl/textures/pause.png");
-    GLuint texPlay = LoadTexture("C:/Users/123ke/projects/opengl/textures/play.png");
-    GLuint texFast = LoadTexture("C:/Users/123ke/projects/opengl/textures/forward.png");
+    GLuint texPause = LoadTexture("textures/pause.png");
+    GLuint texPlay = LoadTexture("textures/play.png");
+    GLuint texFast = LoadTexture("textures/forward.png");
 
     speedButtons[0] = texPause;
     speedButtons[1] = texPlay;

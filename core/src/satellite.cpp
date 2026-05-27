@@ -2,8 +2,8 @@
 #include <fstream>
 #include <iostream>
 #include <camera.h>
-#include <glm.hpp>
-#include <gtc/matrix_transform.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include "utils.h"
 
 Satellite::Satellite(const char *binaryPath, const char *orbitvs, const char *orbitfs) : satShader(orbitvs, orbitfs)

@@ -3,8 +3,8 @@
 #include <GLFW/glfw3.h>
 #include <math.h>
 #include <fstream>
-#include <glm.hpp>
-#include <gtc/matrix_transform.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "sat_sim.h"
 #include "sphere.h"
@@ -24,17 +24,17 @@ const int height = 800;
 const int width = 800;
 
 // Paths
-const char *earthvs = "C:/Users/123ke/projects/opengl/shaders/earth.vs";
-const char *earthfs = "C:/Users/123ke/projects/opengl/shaders/earth.fs";
-const char *skyboxfs = "C:/Users/123ke/projects/opengl/shaders/skybox.fs";
-const char *skyboxvs = "C:/Users/123ke/projects/opengl/shaders/skybox.vs";
-const char *lightfs = "C:/Users/123ke/projects/opengl/shaders/light.fs";
-const char *lightvs = "C:/Users/123ke/projects/opengl/shaders/light.vs";
-const char *orbitfs = "C:/Users/123ke/projects/opengl/shaders/orbit.fs";
-const char *orbitvs = "C:/Users/123ke/projects/opengl/shaders/orbit.vs";
+const char *earthvs = "shaders/earth.vs";
+const char *earthfs = "shaders/earth.fs";
+const char *skyboxfs = "shaders/skybox.fs";
+const char *skyboxvs = "shaders/skybox.vs";
+const char *lightfs = "shaders/light.fs";
+const char *lightvs = "shaders/light.vs";
+const char *orbitfs = "shaders/orbit.fs";
+const char *orbitvs = "shaders/orbit.vs";
 
-const char *earthPath = "C:/Users/123ke/projects/opengl/textures/earth4k.jpg";
-const char *binaryPath = "C:/Users/123ke/projects/opengl/scripts/precomputed_orbits.bin";
+const char *earthPath = "textures/earth4k.jpg";
+const char *binaryPath = "scripts/precomputed_orbits.bin";
 
 int main()
 {

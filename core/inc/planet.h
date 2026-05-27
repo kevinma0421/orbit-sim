@@ -3,7 +3,7 @@
 #include <string>
 #include <glad/glad.h>
 
-#include "Sphere.h"
+#include "sphere.h"
 #include "camera.h"
 
 class Planet : public Sphere

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <glad/glad.h> // OpenGL functions
-#include <glm.hpp>     // Math library
+#include <glm/glm.hpp>     // Math library
 #include "shader.h"
 
 class Sphere

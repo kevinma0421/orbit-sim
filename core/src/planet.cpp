@@ -3,8 +3,8 @@
 #include <GLFW/glfw3.h>
 #include <math.h>
 #include <fstream>
-#include <glm.hpp>
-#include <gtc/matrix_transform.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "stb.h"
 #include <planet.h>
@@ -17,7 +17,7 @@ Planet::Planet(const char *texturePath, const char *vertexShader, const char *fr
     initLighting = camera.getPosition();
     rotationSpeed = 2 * glm::pi<float>() / 86164.0f;
     tilt = 23.5f;
-    cloudTexture = setTexture("C:/Users/123ke/projects/opengl/textures/cloud2.png");
+    cloudTexture = setTexture("textures/cloud2.png");
 }
 void Planet::renderEarth(Camera &camera)
 {

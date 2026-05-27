@@ -1,9 +1,9 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include <glm.hpp>
+#include <glm/glm.hpp>
 
-#include "Shader.h"
+#include "shader.h"
 #include "utils.h"
 
 Shader::Shader(const char *vertexPath, const char *fragmentPath)

@@ -6,16 +6,24 @@ R_EARTH = 6371.0  # Earth's radius in km
 N_POINTS = 100    # points per orbit
 
 # Parse file
+def _is_float(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
 def parse_line(line):
     parts = line.strip().split()
     name = parts[0]
-    inclination = np.radians(float(parts[1]))
-    raan = np.radians(float(parts[2]))
-    eccentricity = float(parts[3])
-    arg_perigee = np.radians(float(parts[4]))
-    mean_anomaly = np.radians(float(parts[5]))
-    mean_motion = float(parts[6])  # revs per day
-    epoch = float(parts[7])
+    numeric = [p for p in parts[1:] if _is_float(p)]
+    inclination = np.radians(float(numeric[0]))
+    raan = np.radians(float(numeric[1]))
+    eccentricity = float(numeric[2])
+    arg_perigee = np.radians(float(numeric[3]))
+    mean_anomaly = np.radians(float(numeric[4]))
+    mean_motion = float(numeric[5])  # revs per day
+    epoch = float(numeric[6])
     return name, inclination, raan, eccentricity, arg_perigee, mean_anomaly, mean_motion
 
 # Compute satellite position in ECI coordinates
@@ -65,7 +73,7 @@ def mean_motion_to_a(n):
 # Load and process satellites
 satellite_vertices = []
 
-with open("starlink.txt", "r") as file:
+with open("starlink_processed.txt", "r") as file:
     for line in file:
         name, i, raan, e, argp, M0, n = parse_line(line)
         a = mean_motion_to_a(n)
@@ -74,7 +82,7 @@ with open("starlink.txt", "r") as file:
 
 # Dump to file
 with open("precomputed_orbits.bin", "wb") as out:
-    with open("starlink.txt", "r") as file:
+    with open("starlink_processed.txt", "r") as file:
         for line in file:
             name, i, raan, e, argp, M0, n = parse_line(line)
             a = mean_motion_to_a(n)

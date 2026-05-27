@@ -2,7 +2,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include "Window.h"
+#include "window.h"
 #include "utils.h"
 #include "camera.h"
 #include "imgui.h"

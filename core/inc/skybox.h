@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <glad/glad.h>
-#include <glm.hpp>
+#include <glm/glm.hpp>
 #include "shader.h" // Your shader wrapper class
 #include "stb.h"
 #include "camera.h"
@@ -30,12 +30,12 @@ private:
     const char *space_5 = "C:/Users/123ke/projects/opengl/textures/skybox/space_lf.png";
     const char *space_6 = "C:/Users/123ke/projects/opengl/textures/skybox/space_rt.png";*/
 
-    const char *space_1 = "C:/Users/123ke/projects/opengl/textures/skybox/ny1.png";
-    const char *space_2 = "C:/Users/123ke/projects/opengl/textures/skybox/nx1.png";
-    const char *space_3 = "C:/Users/123ke/projects/opengl/textures/skybox/nz1.png";
-    const char *space_4 = "C:/Users/123ke/projects/opengl/textures/skybox/px1.png";
-    const char *space_5 = "C:/Users/123ke/projects/opengl/textures/skybox/py1.png";
-    const char *space_6 = "C:/Users/123ke/projects/opengl/textures/skybox/pz1.png";
+    const char *space_1 = "textures/skybox/ny1.png";
+    const char *space_2 = "textures/skybox/nx1.png";
+    const char *space_3 = "textures/skybox/nz1.png";
+    const char *space_4 = "textures/skybox/px1.png";
+    const char *space_5 = "textures/skybox/py1.png";
+    const char *space_6 = "textures/skybox/pz1.png";
 
     // Skybox init
     /*std::vector<std::string> faces = {

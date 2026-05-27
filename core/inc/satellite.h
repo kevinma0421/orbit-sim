@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <glad/glad.h>
-#include <glm.hpp>
+#include <glm/glm.hpp>
 #include "shader.h"
 #include "camera.h"
 
